@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 
+#include "ClipboardReader.h"
+#include "Workaround.h"
+
 void printUsage() {
     std::cout << "Usage: eac-cue-workaround [cue-file] [clipboard-file]"
               << std::endl;
@@ -13,6 +16,9 @@ int main(int argc, char* argv[]) {
         printUsage();
         return 0;
     }
+
+    Workaround w(args[0], args[1]);
+    w.fillSheetFromClipboard(false);
 
     return 0;
 }

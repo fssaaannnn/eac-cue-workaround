@@ -1,2 +1,5 @@
 
 /build
+*.cue
+*.txt
+*.cue.fixed
